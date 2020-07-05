@@ -3,7 +3,7 @@ import AppError from '../errors/AppError';
 import TransactionRepository from '../repositories/TransactionsRepository';
 
 class DeleteTransactionService {
-  public async execute(id: number): Promise<void> {
+  public async execute(id: string): Promise<void> {
     const transactionsRepo = getCustomRepository(TransactionRepository);
 
     const transaction = await transactionsRepo.findOne(id);
